@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewData["Title"] = "EmpList";
+}
+
+<h1>EmpList</h1>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Salary</td>
+        </tr>
+</thead>
+<tbody>
+        @foreach(Employee e in (IEnumerable<Employee>)ViewData["List"])
+        {
+            <tr>
+            <td>@e.Id</td>
+            <td>@e.Name</td>
+            <td>@e.Salary</td>
+        </tr>
+        }
+    </tbody>
+</table>
