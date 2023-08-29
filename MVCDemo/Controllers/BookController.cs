@@ -14,6 +14,8 @@ namespace MVCDemo.Controllers
                 new Book{Id=4,Name="Rich Dad Poor Dad",Price=399},
             };
             ViewData["list"]= book;
+
+            ViewBag.BookList = book;
             return View();
         }
     }

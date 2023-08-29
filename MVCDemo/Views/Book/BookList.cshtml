@@ -13,7 +13,27 @@
         </tr>
     </thead>
     <tbody>
-        @foreach(Book b in (IEnumerable<Book>)ViewData["List"])
+        @foreach(Book b in (IEnumerable<Book>)ViewData["list"])
+        {
+            <tr>
+                <td>@b.Id</td>
+                <td>@b.Name</td>
+                <td>@b.Price</td>s
+            </tr>
+        }
+    </tbody>
+</table>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <td>Id</td>
+            <td>Name</td>
+            <td>Price</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(Book b in ViewBag.BookList)
         {
             <tr>
                 <td>@b.Id</td>
